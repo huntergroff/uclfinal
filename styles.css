@@ -126,7 +126,8 @@ div.navbar {
     font-family: tandelle, sans-serif;
     font-size: 69px;
     line-height: 120px;
-
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
     overflow-x: hidden;
     overflow-wrap: break-word;
     white-space: nowrap;
@@ -588,7 +589,7 @@ img.shirt {
 }
 
 .final {
-    margin-top: 320px;
+    margin-top: 100px;
 }
 
 .final .cup {
