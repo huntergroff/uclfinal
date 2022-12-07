@@ -777,7 +777,7 @@ img.shirt {
 
 /* Mobile Formatting */
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     #rmanavicon,
     #psgnavicon,
@@ -1200,7 +1200,7 @@ img.shirt {
     }
     
     body {
-        max-height: 8000px;
+        max-height: 6000px;
     }
 
 }
