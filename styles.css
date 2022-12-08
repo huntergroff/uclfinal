@@ -835,6 +835,10 @@ img.shirt {
         height: calc(min(40px, 8vw));;
     }
 
+    .bottom-nav .uclball {
+        color: white;
+    }
+
     .navbar {
         height: calc(min(var(--navbar-height) 15vw));
     }
