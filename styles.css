@@ -624,8 +624,12 @@ img.shirt {
     color: var(--ucl-blue);
 }
 
-.l .score, #mobile-bracket .score {
+.l .score {
     margin-left: 16px;
+}
+
+#mobile-bracket .score {
+    margin-left: 3vw;
 }
 
 .r .score {
@@ -795,13 +799,30 @@ img.shirt {
     .benzema2,
     .psg-celeb.dt,
     .psg-screen h2.dt,
+    .rma-screen h2.dt,
     #bracket {
         display: none;
     }
 
+    div.navbar {
+        height: calc(max(var(--navbar-height) 6vw));
+    }
+
+    .navbar h1 {
+        font-size: calc(min(40pt, 10vw));
+    }
+
+    .navbar .uclball {
+        height: calc(min(40px, 8vw));;
+    }
+
+    .navbar {
+        height: calc(min(var(--navbar-height) 15vw));
+    }
+
     .grid {
         grid-template-columns: var(--outside-margin) repeat(3, 1fr) var(--outside-margin);
-        min-width: 400px;
+        min-width: 0px;
     }
 
     .navbar-left {
@@ -834,12 +855,12 @@ img.shirt {
     }
 
     .center-text h1 {
-        font-size: calc(max(33vw, 133px));
+        font-size: 32vw;
         line-height: 100%;
     }
 
     .center-text h2 {
-        font-size: calc(max(21vw, 84px));
+        font-size: 20vw;
         line-height: 70%;
     }
 
@@ -875,12 +896,12 @@ img.shirt {
         grid-column: 1;
         grid-row: 1;
         background-color: var(--ucl-blue);
-        padding: calc(max(44vw, 176px)) 0;
+        padding: 44vw 0;
 
     }
 
     .hype {
-        top: calc(min(-120px, -30vw));
+        top: -30vw;
         height: fit-content;
         z-index: 20;
         display: grid;
@@ -901,20 +922,23 @@ img.shirt {
     }
 
     .main-screen .title {
-        padding-top: 80px;
+        padding-top: calc(min(80px, 16vw));
     }
 
 
 
 
-    .psg-screen,
+    .psg-screen {
+        top: -30vw;
+    }
+
     .rma-screen {
-        top: calc(min(-30vw, -120px));
+        top: -40vw;
     }
 
     .main-bg-3,
     .main-bg-5 {
-        padding: calc(max(300px, 75vw)) 0;
+        padding: 75vw 0;
     }
 
     .psg-screen img.psg-mono,
@@ -924,8 +948,8 @@ img.shirt {
 
     .psg-screen h1,
     .psg-screen h2 {
-        font-size: calc(max(82px, 19.8vw));
-        line-height: calc(max(72px, 18vw));
+        font-size: 19vw;
+        line-height: 18.5vw;
         grid-column: 2 / 5;
         text-align: left;
     }
@@ -948,8 +972,17 @@ img.shirt {
     }
 
 
-    .psg-screen h2.mob {
+    .psg-screen h2.mob, .rma-screen h2.mob {
         display: block;
+    }
+
+    .rma-screen h2.mob, .rma-screen h1 {
+        font-size: 26vw;
+        line-height: 24vw;
+    }
+    
+    .rma-hype {
+        padding-top: 22vw;
     }
 
     .psg-lineup h3,
@@ -998,7 +1031,7 @@ img.shirt {
 
     .psg-lineup,
     .rma-lineup {
-        top: calc(min(-30vw, -120px));
+        top: -30vw;
         z-index: 20;
     }
 
@@ -1009,9 +1042,9 @@ img.shirt {
     .psg-mobile, .rma-mobile {
         display: block;
         position: relative;
-        top: calc(min(-30vw, -120px));
+        top: -30vw;
         height: fit-content;
-        padding-bottom: calc(max(160px, 40vw));
+        padding-bottom: 40vw;
     }
 
     .psg-mobile {
@@ -1027,11 +1060,11 @@ img.shirt {
     .psg-mobile .messi3, .rma-mobile .benzema4 {
         -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
         grid-row: 1 / 8;
-        width: 100%;
+        width: 36vw;
         position: relative;
-        top: -76px;
+        top: -14vw;
         z-index: 20;
     }
 
@@ -1057,23 +1090,23 @@ img.shirt {
 
     .psg-mobile h1, .rma-mobile h1 {
         font-family: neue-haas-unica, sans-serif;
-        font-size: calc(min(36px, 9vw));;
-        margin-top: 30px;
+        font-size: 8vw;
+        margin-top: 8vw;
     }
 
     .mobile-sub h2 {
         font-family: tandelle, sans-serif;
-        font-size: 25px;
+        font-size: 5vw;
     }
 
     .mobile-sub p {
         font-weight: 500;
-        margin-left: 6px;
+        margin-left: 3vw;
     }
 
     .psg-mobile p, .rma-mobile p{
         font-family: neue-haas-unica, sans-serif;
-        font-size: calc(max(3vw, 16px));
+        font-size: 3vw;
     }
 
     .psg-mobile h3, .rma-mobile h3 {
@@ -1081,8 +1114,8 @@ img.shirt {
         grid-column: 2 / 4;
         font-family: tandelle, sans-serif;
         color: transparent;
-        font-size: calc(max(82px, 19.8vw));
-        line-height: calc(max(68px, 17.5vw));
+        font-size: 19.8vw;
+        line-height: 17.5vw;
         grid-row: 4;
         font-weight: 100;
     }
@@ -1110,15 +1143,18 @@ img.shirt {
 
 
     .bottom-screen {
-        top: calc(min(-120px, -30vw));
+        top: -30vw;
     }
 
     .final {
-        top: calc(min(-320px, -30vw - 200px));
+        padding-top: 0;
+        top: -53vw;
+        grid-template-rows: auto auto 20vw 8vw;
     }
 
     .final .cup h1 {
-        font-size: 112px;
+        font-size: 21vw;
+        line-height: 18.5vw;
     }
 
     #mobile-bracket {
@@ -1127,14 +1163,14 @@ img.shirt {
         grid-column: 1;
         width: 100%;
         padding-top: 22vw;
-        grid-template-rows: calc(max(48px, 12vw)) repeat(4, calc(max(18vw, 72px))) calc(max(48px, 12vw)) repeat(2, calc(max(18vw, 72px))) calc(max(48px, 12vw)) calc(max(18vw, 72px));
+        grid-template-rows: 12vw repeat(4, 18vw) 12vw repeat(2, 18vw) 12vw 18vw;
     }
 
     #mobile-bracket h1.header {
         color: var(--ucl-pink);
         font-family: neue-haas-unica, sans-serif;
         font-weight: 800;
-        font-size: calc(max(8vw, 32px));
+        font-size: 8vw;
         grid-column: 2/5;
     }
 
@@ -1148,14 +1184,12 @@ img.shirt {
 
     .bracket-row .team {
         width: 25vw;
-        min-width: 100px;
         height: 8vw;
-        min-height: 32px;
         align-items: center;
     }
 
     #mobile-bracket .bracket-row h1 {
-        font-size: calc(max(5.5vw, 22px));
+        font-size: 5.5vw;
         line-height: 0;
     }
 
@@ -1200,7 +1234,71 @@ img.shirt {
     }
     
     body {
+        height: fit-content;
         max-height: 6000px;
     }
 
+    .tickets h2 {
+        font-size: 14vw;
+    }
+
+    .final .caption p {
+        font-size: 7vw;
+        line-height: 8vw;
+    }
+
+    .cupimg {
+        height: 61vw;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:500px) {
+
+    .psg-line {
+        height: fit-content;
+    }
+
+    .shirtbox {
+        width: 21vw;
+        height: 21vw;
+    }
+    
+    .shirtbox img.shirt {
+        width: 16.5vw;
+    }
+
+    .shirtbox h5 {
+        font-size: 9vw;
+        top: -13vw;
+    }
+
+    .shirtbox h4 {
+        top: -10vw;
+        font-size: calc(min(3.4vw, 16px));
+    }
+
+    .psg-starters, .rma-starters {
+        height: 91%;
+        margin-top: 8vw;    
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .center-text h1 {
+        font-size: 29vw;
+    }
+
+    .center-text h2 {
+        font-size: 18vw;
+    }
+
+    .psg-screen h1, .psg-screen h2 {
+        text-align: center;
+        font-size: 18vw;
+        line-height: 17.2vw;
+    }
 }
